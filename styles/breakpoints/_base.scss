@@ -1,0 +1,392 @@
+.d-none {
+	display: block;
+}
+.mb-none {
+	display: none;
+}
+//component
+.contentWidth {
+	width: calc(100% - 30px);
+	margin: 0 auto;
+}
+.py-lg {
+	padding: 80px 0;
+}
+.hedingDesign {
+	h2 {
+		color: $cWhite;
+		text-align: center;
+	}
+	span {
+		background-color: $border;
+		width: 40px;
+		height: 2px;
+		display: block;
+		margin: 10px auto;
+	}
+}
+
+//default design
+* {
+	font-family: "Shippori Mincho", serif;
+}
+p {
+	font-size: 13px;
+}
+a {
+	color: $cWhite;
+	&:hover {
+		text-decoration: none;
+		color: $cWhite;
+	}
+}
+
+//styles
+
+// ====================
+// top page
+// ====================
+
+.header {
+	z-index: 100;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $headerHeight;
+	background-color: $cHeader;
+	&__inner {
+		width: calc(100% - 20px);
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+		line-height: $headerHeight;
+		a {
+			display: block;
+			color: #333;
+		}
+	}
+	&__menu-list {
+		display: none;
+	}
+	// メニュー下降時
+	&.torigger {
+		transition: opacity 1s ease-in-out;
+		opacity: 1;
+	}
+}
+
+.hero {
+	position: relative;
+	background-image: url(../../images/iPhone12_hero_bg.png);
+	background-size: cover;
+	height: 550px;
+	&__inner {
+		position: absolute;
+		width: 100%;
+		top: 40%;
+		left: 30%;
+		transform: translateY(-30%) translateX(-30%);
+		h1 {
+			text-align: center;
+			img {
+				width: 80%;
+				margin-left: 20%;
+			}
+		}
+		p {
+			color: $cWhite;
+			text-align: center;
+			font-size: 18px;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+.concept {
+	background-color: $bgc;
+	&__inner {
+		@extend .py-lg;
+		@extend .contentWidth;
+	}
+	&__heding {
+		color: $cWhite;
+		h2 {
+			position: relative;
+			span {
+				width: 40px;
+				height: 2px;
+				background-color: $border;
+				position: absolute;
+				bottom: -10px;
+				left: 0;
+			}
+		}
+	}
+	&__contents {
+		position: relative;
+		padding-top: 40px;
+		p {
+			color: $cWhite;
+			font-size: 13px;
+			margin-bottom: 20px;
+		}
+		img {
+			position: absolute;
+			bottom: -45%;
+			right: 0;
+			opacity: 0.5;
+			width: 70%;
+			object-fit: cover;
+			object-position: 40px;
+		}
+	}
+}
+
+.pursuit {
+	background-color: $bgc;
+	color: $cWhite;
+	&__inner {
+		@extend .py-lg;
+		@extend .contentWidth;
+	}
+	&__heding {
+		@extend .hedingDesign;
+	}
+	&__items {
+		margin-top: 50px;
+	}
+	&__item {
+		margin-bottom: 40px;
+		h3 {
+			margin-bottom: 30px;
+			font-size: 24px;
+		}
+	}
+	&__contents {
+		p {
+			font-size: 14px;
+			margin-bottom: 20px;
+			letter-spacing: 2px;
+		}
+		img {
+			width: calc(100% + 30px);
+			margin-left: -15px;
+			margin-top: -30px;
+		}
+	}
+}
+
+.service {
+	background-color: $bgc;
+	&__inner {
+		@extend .py-lg;
+	}
+	&__heding {
+		@extend .hedingDesign;
+		margin-bottom: 60px;
+	}
+	&__item {
+		img {
+			width: 100%;
+		}
+	}
+	&__text {
+		color: $cWhite;
+		margin: 40px auto 50px auto;
+		text-align: center;
+		h3 {
+			margin-bottom: 20px;
+		}
+		a {
+			display: inline-block;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			padding: 10px 30px;
+			margin-top: 20px;
+		}
+	}
+}
+
+.voice {
+	background-image: url(../../images/owner.png);
+	background-size: cover;
+	height: 600px;
+	&__inner {
+		@extend.py-lg;
+	}
+	&__contents {
+		background-color: rgba(17, 17, 17, 0.3);
+		padding: 40px 10px;
+		width: 85%;
+		height: 450px;
+		margin: 0 0 0 auto;
+		color: $cWhite;
+		position: relative;
+		h2 {
+			text-align: right;
+			margin-bottom: 30px;
+			text-shadow: 1px 1px 10px #11111199;
+		}
+		p {
+			font-size: 14px;
+			text-shadow: 1px 1px 10px rgba(17, 17, 17, 0.6);
+		}
+		img {
+			width: 40%;
+			text-align: right;
+			position: absolute;
+			bottom: 10;
+			right: 0;
+		}
+	}
+}
+
+.company {
+	background-color: $bgc;
+	&__inner {
+		@extend .py-lg;
+	}
+	&__heding {
+		@extend .hedingDesign;
+		margin-bottom: 30px;
+	}
+	&__contents {
+		iframe {
+			width: 100%;
+			height: 200px;
+		}
+	}
+	&__items {
+		background-image: url(../../images/company_bg_mobile.png);
+		background-size: cover;
+		padding: 60px 20px;
+	}
+	&__item {
+		color: $cWhite;
+	}
+	&__info {
+		display: flex;
+		p {
+			&:first-child {
+				flex-basis: 30%;
+				margin-left: 30px;
+			}
+			&:last-child {
+				flex-basis: 50%;
+			}
+		}
+	}
+}
+
+// =====================
+// bottom pages
+// =====================
+
+$commonSpace: 30px;
+
+.webhero {
+	background-color: $bgc;
+	&__inner {
+		img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+			object-position: 0 -50px;
+		}
+	}
+	&__contents {
+		padding: 60px 0;
+		color: $cWhite;
+		p {
+			text-align: center;
+		}
+	}
+	&__heding {
+		@extend .hedingDesign;
+		margin-bottom: 40px;
+	}
+}
+
+.price {
+	.bg-text {
+		color: rgba(17, 17, 17, 0.1);
+		margin-top: 30px;
+		p {
+			font-size: 60px;
+			text-align: right;
+			letter-spacing: 4px;
+			font-weight: 600;
+		}
+	}
+	.black-heding {
+		background-color: $bgc;
+		width: 60%;
+		height: 45px;
+		line-height: 45px;
+		h2 {
+			color: $cWhite;
+			margin-left: $commonSpace;
+		}
+	}
+	&__item {
+		padding: 60px 0;
+	}
+	&__top {
+		margin-left: $commonSpace;
+		p {
+			font-size: 12px;
+			margin-bottom: 0.2em;
+		}
+		h3 {
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+		.yen {
+			font-size: 25px;
+			font-weight: 600;
+			margin-right: $commonSpace;
+			text-align: right;
+		}
+	}
+	&__contents__wrapper {
+		margin-top: 50px;
+		padding: 15px;
+		padding-left: 0;
+		border: 1px solid rgba(17, 17, 17, 0.3);
+		width: 80%;
+		border-left: none;
+	}
+	&__contents {
+		border: 1px solid rgba(17, 17, 17, 0.1);
+		padding: 15px 0;
+		padding-left: $commonSpace;
+	}
+	&__image {
+		width: 70%;
+		display: block;
+		margin: 0 0 0 auto;
+		margin-top: -90px;
+	}
+	&__note {
+		margin-left: $commonSpace;
+		p {
+			margin-bottom: 0.3em;
+			font-size: 10px;
+			opacity: 0.8;
+		}
+	}
+	&__btn {
+		display: block;
+		text-align: center;
+		padding: 15px 30px;
+		border: 1px solid rgba(17, 17, 17, 0.3);
+		color: rgba(17, 17, 17, 0.6);
+		width: 250px;
+		margin: 50px auto;
+	}
+}
