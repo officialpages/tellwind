@@ -192,7 +192,7 @@ a:hover {
 
 .hero {
   position: relative;
-  //github pagesに適応するため、パスを絶対パスに変換
+  /* github pagesに適応するため、パスを絶対パスに変換  */
   background-image: url(https://github.com/officialpages/tellwind/blob/main/images/iPhone12_hero_bg.png?raw=true);
   background-size: cover;
   height: 550px;
@@ -327,7 +327,7 @@ a:hover {
 }
 
 .voice {
-  //github pagesで表示するために絶対パスに変換
+  /* github pagesで表示するために絶対パスに変換 */
   background-image: url(https://github.com/officialpages/tellwind/blob/main/images/owner.png?raw=true);
   background-size: cover;
   height: 600px;
@@ -547,7 +547,7 @@ a:hover {
     margin: 10px auto;
   }
   .hero {
-    //github pagesに適応するため、パスを絶対パスに変換
+    /* github pagesに適応するため、パスを絶対パスに変換 */
     background-image: url(https://github.com/officialpages/tellwind/blob/main/images/pc_bg3.png?raw=true);
     height: 100vh;
   }
